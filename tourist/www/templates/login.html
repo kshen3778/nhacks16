@@ -1,0 +1,35 @@
+<ion-view title="Login">
+    <ion-content overflow-scroll="true" padding="false" scroll="false" class="has-header" style="background: url(img/nyc.jpg) no-repeat center;">
+        <form class="list">
+            <div class="list" ng-cloak ng-show="isLoggedIn()">
+              <a class="item item-icon-left" ui-sref="tours">
+                <i class="icon ion-map"></i>
+                Tours
+              </a>
+              <a class="item item-icon-left" ui-sref="request">
+                <i class="icon ion-paper-airplane"></i>
+                Submit a Request
+              </a>
+              <a class="item item-icon-left" ui-sref="profile">
+                <i class="icon ion-person"></i>
+                Profile
+              </a>
+            </div>
+            <ion-list ng-hide="isLoggedIn()" ng-cloak>
+                <label class="item item-input">
+                    <span class="input-label">Email</span>
+                    <input type="email" placeholder="john@example.com" ng-model="user.email">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Password</span>
+                    <input type="password" ng-model="user.password">
+                </label>
+            </ion-list>
+            
+            <div style="position: fixed; bottom: 125px; width: 100%;">
+                    <div class="col"><button ng-hide="isLoggedIn()" ng-click="logIn()" type="submit" id="login-button5" class="button button-balanced  button-block">Log In</button></div>
+                    <div class="col"><button ng-cloak ng-show="isLoggedIn()" ng-click="logOut()" id="login-button4" class="button button-balanced  button-block">Log Out</button></div>
+            </div>
+        </form>
+    </ion-content>
+</ion-view>

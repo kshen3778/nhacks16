@@ -1,0 +1,26 @@
+<ion-view title="Request a Tour">
+    <ion-content overflow-scroll="true" padding="false" class="has-header">
+        <form class="list">
+            <ion-list ng-hide="isLoggedIn()">
+                
+                <label class="item item-input">
+                    <span class="input-label">Name</span>
+                    <input type="text" placeholder="Your name" ng-model="request.name">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Location</span>
+                    <input type="text" placeholder="City, Country" ng-model="request.location">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Description</span>
+                    <input type="text" placeholder="Your tour criterias" ng-model="request.desc">
+                </label>
+            </ion-list>
+
+            <div style="position: absolute; margin-bottom: 125px; width: 100%">
+                <div class="col"><button ng-click="addReq()" type="submit" class="button button-balanced  button-block">Submit</button></div>
+            </div>
+        </form>
+        
+    </ion-content>
+</ion-view>

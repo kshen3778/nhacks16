@@ -1,0 +1,11 @@
+<ion-view title="Tour Guides">
+    <ion-content overflow-scroll="true" padding="false" class="has-header">
+        <ion-list ng-repeat="p in guides">
+            <ion-item class="item-thumbnail-left" ui-sref="profile">
+                <img src="{{p.avatar}}">
+                <h2>{{p.name+' '+p.surname}}</h2>
+                <p>{{p.description}}</p>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,40 @@
+<ion-view title="Signup">
+    <ion-content overflow-scroll="true" padding="false" scroll="false" class="has-header">
+        <form class="list">
+            <ion-list>
+                <label class="item item-input">
+                    <span class="input-label">First Name</span>
+                    <input type="text" placeholder="John" ng-model="user.name">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Last Name</span>
+                    <input type="text" placeholder="Doe" ng-model="user.surname">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Phone</span>
+                    <input type="tel" placeholder="123-456-7890" ng-model="user.phone">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Location</span>
+                    <input type="text" placeholder="City, Country" ng-model="user.location">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Short Description</span>
+                    <input type="text" placeholder="I specialize in history, etc." ng-model="user.description">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Email</span>
+                    <input type="email" placeholder="john@example.com" ng-model="user.email">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Password</span>
+                    <input type="password" placeholder="********" ng-model="user.password">
+                </label>
+                
+            </ion-list>
+            <div style="position: absolute; bottom: 20dp; width: 100%;">
+                <div style="col"><button ng-click="register()" type="submit" ui-sref="tourguide" id="signup-button4" class="button button-assertive  button-block">Sign Up</button></div>
+            </div>
+        </form>
+    </ion-content>
+</ion-view>

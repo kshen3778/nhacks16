@@ -1,0 +1,38 @@
+<ion-view title="User Profile">
+    <ion-content overflow-scroll="true" padding="false" class="has-header">
+        <ion-list>
+            <ion-item class="item-thumbnail-left">
+                <h2 style="line-height: normal">{{email}}</h2>
+                <p>Tourist</p>
+                <br>
+            </ion-item>
+        </ion-list>
+        
+        <h2 style="text-align:center;">My Requests</h2>
+     
+            
+            <div ng-repeat="r in requests" class="list">
+                
+                
+                <div class="card">
+                  <div class="item item-text-wrap" style="text-align:center;">
+                    <a ng-show="r.location">
+                        Location: {{r.location}}
+                    </a>
+                    <br>
+                    <a ng-show="r.desc">
+                         Description: {{r.desc}}
+                    </a>
+                    <br>
+                    <button type="submit" ng-click="edit()" class="button-icon icon ion-edit"></button>
+                    <button type="submit" ng-click="delete(r)" class="button-icon icon ion-trash-b"></button>
+                    <br>
+                  </div>
+                </div>
+            </div>
+            
+            <br>
+        
+       
+    </ion-content>
+</ion-view>
